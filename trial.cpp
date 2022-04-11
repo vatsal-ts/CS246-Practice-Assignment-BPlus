@@ -440,6 +440,12 @@ void BPTree::insertInternal(int x, Node *cursor, Node *child)
             {
                 cursor->key[copy] = virtualKey[copy];
             } // cursor re-set
+        for (i = 0, j = 0; // no pointer is skipped though
+             i < cursor->size + 1;
+             i++, j++)
+        {
+            cursor->ptr[i] = virtualPtr[j];
+        }
 
         // Insert new node as an
         // internal node

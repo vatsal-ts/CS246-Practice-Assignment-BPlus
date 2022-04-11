@@ -434,7 +434,8 @@ void BPTree::insertInternal(int x, Node *cursor, Node *child)
         cursor->size = (indexnode_size) / 2; // changing size of this node where insertion is being done
 
         newInternal->size = indexnode_size - (indexnode_size) / 2;
-
+        
+        //Pranshu's corrections
         for (int copy = 0; copy < cursor->size; copy++)
             {
                 cursor->key[copy] = virtualKey[copy];
@@ -483,7 +484,7 @@ void BPTree::insertInternal(int x, Node *cursor, Node *child)
 
             // Recursive Call to insert
             // the data
-            cout<<virtualKey[cursor->size]<<"gets sent\n";
+            // cout<<virtualKey[cursor->size]<<"gets sent\n";
             insertInternal(virtualKey[cursor->size], // out of indedx but still holds a value which is to be pushed up
                            findParent(root,
                                       cursor),

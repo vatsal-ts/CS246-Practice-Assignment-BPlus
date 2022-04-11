@@ -1,0 +1,7 @@
+# Ignore executables
+*.exe
+*.out
+
+#special
+sweee.cpp
+.vscode
